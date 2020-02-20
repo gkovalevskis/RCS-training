@@ -1,0 +1,36 @@
+Definēt int tipa masīvu ar vismaz 5 elementiem. Atrast masīvā max un min elementu un izdrukāt to vērtības.
+
+
+﻿using System;
+
+namespace Uzdevums4._7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Definēt int tipa masīvu ar vismaz 5 elementiem.
+            //Atrast masīvā max un min elementu un izdrukāt to vērtības.
+
+            int[] masivs = new int[] { 235, 989, 5248, 2563, 89, 0 };
+            int maxVertiba = 0;
+            int minVertiba = 0;
+
+            for (int i = 0; i < masivs.Length; i++)
+            {
+                
+                if (masivs[i] > masivs[0])
+                {
+                    maxVertiba = masivs[i];
+                }
+                else if (masivs[i] < masivs[0])
+                {
+                    minVertiba = masivs[i];
+                }
+                
+                
+            }
+            Console.WriteLine($"Masīva max vērtība = {maxVertiba}, bet min vērtība = {minVertiba}");
+        }
+    }
+}

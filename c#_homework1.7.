@@ -1,0 +1,105 @@
+Tiem, kam ir vēlme palauzīt galvu: izveidot programmu, kurā nodefinēti divi mainīgie – a, b. 
+Datu tips pēc jūsu izvēles (piemēram string vai int). Pieprasīt lietotājam ievadīt abas vērtības no konsoles. 
+Pamatuzdevums – izdomāt, kā apmainīt šiem mainīgajiem vērtības ar vietām. Pēc tam izdrukāt abus mainīgos a & b uz ekrāna. 
+Drukāt vajag tieši vērtības a un b, nevis divus pilnīgi citus mainīgos.
+
+
+
+1.Cietais rieksts
+100/100
+100 balles no 100
+
+Jānis Lācis
+6. janv.
+Tiem, kam ir vēlme palauzīt galvu: izveidot programmu, kurā nodefinēti divi mainīgie – a, b. Datu tips pēc jūsu izvēles (piemēram string vai int). Pieprasīt lietotājam ievadīt abas vērtības no konsoles. Pamatuzdevums – izdomāt, kā apmainīt šiem mainīgajiem vērtības ar vietām. Pēc tam izdrukāt abus mainīgos a & b uz ekrāna. Drukāt vajag tieši vērtības a un b, nevis divus pilnīgi citus mainīgos.
+Mācību priekšmeta komentāri
+
+Jūsu darbs
+Novērtēts
+
+Program.cs
+Teksts
+13 privāti komentāri
+
+Girts Kovalevskis7. janv.
+Čau, Jāni! Nezinu vai šo atrisināju pareizi, bet neko citu izdomāt pagaidām nevarēju. Ģirts
+
+Jānis Lācis7. janv.
+Nekas, palauzīsi vēl nedaudz galvu.
+Situācija ir tāda:
+Tu ievadi a un b no konsoles, tas labi.
+Tagad vari izdrukāt Console.WriteLine($"a = {a}, b = {b}");
+Tad ir jānotiek kaut kādām izmaiņām, lai, kad atkal izvadītu a un b tieši tāpat, jeb:
+Console.WriteLine($"a = {a}, b = {b}");
+Tad a un b vērtības būtu vietām.
+
+Jānis Lācis7. janv.
+Katrā ziņā, ja joprojām netiec uz priekšu, dod ziņu, došu kādu mājienu.
+
+Girts Kovalevskis7. janv.
+Ja pareizi saprotu tad ir vajadzīga kāda komanda, jo a=b un b=a šeit nelīdzēs.
+
+Girts Kovalevskis7. janv.
+Atradu. Šodien mācīsimies swich. 🙂
+
+Jānis Lācis7. janv.
+Es nezinu, vai es to minēju, kad nokavēji sākumu vakardienas nodarbībai, bet es minēju, ka katrā mājasdarbā NEKAD nav jāizmanto nekas tāds, kas nav mācīts.
+Līdz ar to par switch var droši aizmirst, šis ir pirmās dienas uzdevums, jāizmanto tikai visiem zināmas lietas! :)
+
+Jānis Lācis7. janv.
+Savukārt, tu jau pareizi saki, ka ar a=b un b=a nepietiks.
+Kāpēc ar to nepietiks? Vai vari man to izskaidrot? 
+*atbilde, protams, ir nākamais mājiens, nevis man kaut kas jāuzzina :)
+
+Girts Kovalevskis8. janv.
+Salaboju šādi. Vai tagad ir pareizi?
+
+Jānis Lācis9. janv.
+Ir labāk, pareizs domu gājiens izmantot papildus mainīgos.
+Lai būtu līdz galam efektīvs risinājums, vai vari to pašu izdarīt tikai ar vienu papildus mainīgo?
+
+Girts Kovalevskis11. janv.
+Viens papildus mainīgais.
+
+Jānis Lācis12. janv.
+Ļoti labi, ceru pats izdomāji!
+
+Girts Kovalevskis12. janv.
+Visus uzdevumus risinu pats. Tāpēc tik ilgi sanāk.
+
+Jānis Lācis12. janv.
+Ļoti labi!
+
+
+﻿using System;
+
+namespace cietaisrieksts1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Tiem, kam ir vēlme palauzīt galvu: izveidot programmu, kurā nodefinēti divi mainīgie – a, b. 
+            //Datu tips pēc jūsu izvēles (piemēram string vai int). 
+            //Pieprasīt lietotājam ievadīt abas vērtības no konsoles. 
+            //Pamatuzdevums – izdomāt, kā apmainīt šiem mainīgajiem vērtības ar vietām. 
+            //Pēc tam izdrukāt abus mainīgos a & b uz ekrāna. 
+            //Drukāt vajag tieši vērtības a un b, nevis divus pilnīgi citus mainīgos.
+
+            Console.WriteLine("Ludzu ievadiet vertibu a:");
+            string a = Console.ReadLine();
+            Console.WriteLine("Ludzu ievadiet vertibu b:");
+            string b = Console.ReadLine();
+                                    
+            Console.WriteLine($"b = {b}, a = {a}");
+            string c = "viensPapildusMainigais";
+
+            c = a;
+            a = b;
+            b = c;
+
+            Console.WriteLine($"b = {b}, a = {a}");
+
+        }
+    }
+}

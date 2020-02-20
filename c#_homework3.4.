@@ -1,0 +1,56 @@
+Ir trīs krustojumi. Lietotājs, ievada informāciju par to, vai konkrētajam krustojumam var izbraukt cauri. 
+Programmai ir jāpārbauda, vai ir iespējams visiem krustojumiem izbraukt cauri.
+
+
+using System;
+
+namespace Uzdevums3._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ir trīs krustojumi.Lietotājs, ievada informāciju par to, vai konkrētajam krustojumam var izbraukt cauri.
+            //Programmai ir jāpārbauda, vai ir iespējams visiem krustojumiem izbraukt cauri.
+
+            Console.WriteLine("Ludzu ievadiet true vai false vai 1.krustojumam var izbraukt cauri?");
+            string input1 = Console.ReadLine();
+            bool y = bool.Parse(input1);
+                                          
+
+            Console.WriteLine("Ludzu ievadiet true vai false vai 2.krustojumam var izbraukt cauri?");
+            string input2 = Console.ReadLine();
+            bool x = bool.Parse(input2);
+                       
+            
+            Console.WriteLine("Ludzu ievadiet true vai false vai 3.krustojumam var izbraukt cauri?");
+            string input3 = Console.ReadLine();
+            bool z = bool.Parse(input3);
+
+
+
+            if (!x)
+
+            {
+                Console.WriteLine($"Nav iespejams izbraukt cauri viseim krustojumiem");
+            }
+
+            else if (!y)
+            {
+                Console.WriteLine($"Nav iespejams izbraukt cauri viseim krustojumiem");
+            }
+
+            else if (!z)
+            {
+                Console.WriteLine($"Nav iespejams izbraukt cauri viseim krustojumiem");
+            }
+
+            else
+            {
+                Console.WriteLine($"Viseim krustojumiem ir iespejams izbrault cauri");
+            }
+
+
+        }
+    }
+}

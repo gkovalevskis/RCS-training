@@ -1,0 +1,28 @@
+Izveidot divdimensiju masīvu int[5,5] un piešķirt elementiem vērtības. Izdrukāt visu elementu vērtības console.
+
+using System;
+
+namespace Uzdevums5._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot divdimensiju masīvu int[5, 5] un piešķirt elementiem vērtības.
+            //Izdrukāt visu elementu vērtības console.
+
+            int[,] divdimensijuMasivs = new int[5, 5] { { 89, 5, 99, 0, 67 }, { 16, 7, 57, 90, 13}, { 0, 16, 44, 64, 11 }, { 0, 963, 9089, 23, 34 }, { 99, 666, 90, 76, 33 } };
+
+            for (int i = 0; i < divdimensijuMasivs.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < divdimensijuMasivs.GetLength(1); j++)
+                {
+                    Console.WriteLine($"[{i},{j}]={divdimensijuMasivs[i, j]}");
+
+                }
+
+            }
+        }
+    }
+}

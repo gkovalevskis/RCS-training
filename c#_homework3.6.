@@ -1,0 +1,30 @@
+Izveidot console aplikāciju, kurā ir int masīvs ar vērtībām 7, 4, 7, 3, 6, 9, 2. Samainīt elementu, kura sākotnējā vērtība ir 3 uz 10.
+
+
+using System;
+
+namespace Uzdevums3._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot console aplikāciju, kurā ir int masīvs ar vērtībām 7, 4, 7, 3, 6, 9, 2.
+            //Samainīt elementu, kura sākotnējā vērtība ir 3 uz 10.
+
+            int[] vertibuMasivs = new int[] { 7, 4, 7, 3, 6, 9, 2 };
+            int n = 0;
+            
+            while (n < vertibuMasivs.Length)
+            {
+                int vertiba = vertibuMasivs[n];
+                if (vertiba == 3)
+                {
+                    vertibuMasivs[n] = 10;
+                }
+                Console.WriteLine(vertibuMasivs[n]);
+                n++;
+            }
+        }
+    }
+}

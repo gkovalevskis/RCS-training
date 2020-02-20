@@ -1,0 +1,68 @@
+Uzrakstīt programmu klasē DateValidator kas prasa lietotājam ievadīt datumu un
+mēnesi(atsevišķās rindās). Abi šie lielumi tiek ievadīti kā skaitļi atsevišķā rindā.
+1) Veiciet pārbaudi vai datums ir derīgs konkrētajam mēnesim. Piemēram, datums = 31
+un mēnesis 4 nav derīga kombinācija, jo aprīlī ir tikai 30 dienas.
+2) Ja kāds no ievadītajiem datiem nav derīgs, tad izvadam kļūdas paziņojumu
+3) Ja Ievadītie dati ir derīgi(eksistējoš datums un mēnesis), tad izvadam to uz ekrāna
+aizstājot mēneša numuru ar tā mēneša vārdu.
+Piemēram, ievada 5 un 2, tad programa izvada “5. februāris”
+Tie kas vēlas iet dziļāk. Pievienojiet trešo lauku pie ievades, kas ir gads. Šeit papildus
+jāpārbauda vai tas ir “īsais” vai “garais” gads, attiecīgi dažos gados 29 un 2 būs derīga
+kombinācija, bet dažos nebūs. Mēnešu nosaukumus var glabāt masīvā lai nav jāraksta 12 if
+statement.
+
+
+import java.util.Scanner;
+
+public class DateValidator {
+
+	static String menesi[];
+	public static void main(String[] args) {
+		//prasa lietotājam ievadīt datumu un mēnesi(atsevišķās rindās). 
+		//Abi šie lielumi tiek ievadīti kā skaitļi atsevišķā rindā.
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Lūdzu ievadi kāda mēneša datumu:");
+		int d = sc.nextInt();
+		System.out.print("Lūdzu ievadi skaitli, kurš atbilst mēnesim:");
+		int m = sc.nextInt();
+		System.out.print("Lūdzu ievadi četru skaitļu garu gadu:");
+		String g = sc.next();
+		String gg = g.substring(2, 4);
+		int f = Integer.parseInt(gg);
+		sc.close();
+		//Veiciet pārbaudi vai datums un gads ir derīgs konkrētajam mēnesim.
+		if (m == 2 && d > 29 && f % 4 == 0) {
+			System.out.println("Kļūda! Februārī ir tikai 29 dienas!");
+		}
+		if (m == 2 && d > 28 && f % 4 != 0) {
+			System.out.println("Kļūda! Februārī ir tikai 28 dienas!");
+		}
+		else if((m == 4 && d > 30) || (m == 6 && d > 30) || (m == 9 && d > 30) || (m == 11 && d > 30)) {
+			System.out.println("Kļūda! Šajā mēnesī ir tikai 30 dienas!");
+		}
+		else if((m == 1 && d > 31) || (m == 3 && d > 31) || (m == 5 && d > 31) || (m == 7 && d > 31) ||
+		(m == 8 && d > 31) || (m == 10 && d > 31) || (m == 12 && d > 31)){
+			System.out.println("Kļūda! Šajā mēnesī ir tikai 31 diena!");
+		}
+		else if(m <= 0 || m > 12 || d <= 0){
+					System.out.println("Kļūda! Šāds mēnesis un/vai datums neeksistē!");
+		}			
+		else {
+			menesi = new String[13];
+			menesi[1] = "janvāris";
+			menesi[2] = "februāris";
+			menesi[3] = "marts";
+			menesi[4] = "aprīlis";
+			menesi[5] = "maijs";
+			menesi[6] = "jūnijs";
+			menesi[7] = "jūlijs";
+			menesi[8] = "augusts";
+			menesi[9] = "septembris";
+			menesi[10] = "oktobris";
+			menesi[11] = "novembris";
+			menesi[12] = "decembris";
+			System.out.println(d + "." + menesi[m] + " " + g + ".gads");
+		}
+	}
+
+}

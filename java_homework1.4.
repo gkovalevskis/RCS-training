@@ -1,0 +1,59 @@
+Uzrakstīt programmu klasē ConditionalMath
+1) Programma pieprasa no lietotāja ievadīt viņa vārdu.
+2) Programma pieprasa no lietotāja ievadīt divus veselus skaitļus(piem., i, j) un piešķirt
+to vērtību atbilstoša tipa mainīgajiem
+3) Salīdzinot abus ievadītos skaitļus programma izvada
+a) Paziņojumu par to kurš skaitlis ir lielāks un kurš mazāks, attiecīgi aizstājot B
+“Skaitlis B ir lielāks par skaitli S” vai gadījumā, ja abi skaitļi ir vienādi, tad
+“Skaitlis i un j ir vienādi!”
+b) Paziņojumu vai šo skaitļu summa ir garāka par lietotāja vārdu.
+“Skatiļu i un j summa ir x, kas ir vairāk nekā/mazāk nekā/tikpat cik burtu Tavā vārdā!”
+Lai izmantotu rezultātu no relāciju operātoriem(<,>,<=,>=,==, !=) var izmantot if konstrukcīju.
+Piem.,
+if (a > b) {
+text = “a ir lielāks par b”; // text is defined outside if condition
+}
+Lai noskaidrotu ievadītā vārda garumu var izmantot String objekta metodi length() metodi.
+
+
+import java.util.Scanner;
+
+public class ConditionalMath {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Programma pieprasa no lietotāja ievadīt viņa vārdu.
+		System.out.print("Lūdzu ievadi savu vārdu:");
+		String v = sc.nextLine();
+		//Programma pieprasa no lietotāja ievadīt divus veselus skaitļus(piem., i, j) un piešķirt
+		//to vērtību atbilstoša tipa mainīgajiem
+		System.out.print("Lūdzu ievadi veselu skaitli:");
+		int i = sc.nextInt();
+		System.out.print("Lūdzu ievadi otru veselu skaitli:");
+		int j = sc.nextInt();
+		sc.close();
+		//Izvada paziņojumu par to kurš skaitlis ir lielāks un kurš mazāks,
+		if (i > j) {
+			System.out.println("Skaitlis " + i + " ir lielāks par skaitli " + j + "!");
+		}
+		else if (i < j) {
+			System.out.println("Skaitlis " + j + " ir lielāks par skaitli " + i + "!");
+		}
+		//Izvada paziņojumu, ja skaitļi ir vienādi.
+		else if (i == j) {
+			System.out.print("Skaitlis " + j + " ir vienāds ar skaitli " + i + "!");
+		}
+		//Izvada paziņojumu vai šo skaitļu summa ir garāka par lietotāja vārdu.
+		int sum = i + j;
+		if (sum == v.length()) {
+			System.out.println("Skaitļu " + j + " un " + i + " summa ir tik pat leila cik burtu Tavā vārdā!");
+		}
+		else if (sum > v.length()) {
+			System.out.println("Skaitļu " + j + " un " + i + " summa ir lielāka par burtu skaitu Tavā vārdā!");
+		}
+		else if (sum < v.length()) {
+			System.out.println("Skaitļu " + j + " un " + i + " summa ir mazāka par burtu skaitu Tavā vārdā!");
+		}
+	}
+
+}

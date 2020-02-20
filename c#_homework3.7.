@@ -1,0 +1,31 @@
+Izveidot console aplikāciju, kurā ir definēts string tipa masīvs ar sākotnējām vērtībām "Jānis", "Pēteris", "Andris".
+Izvadīt uz ekrāna masīva otrā elementa vērtību ("Pēteris"). Samainīt masīva 3 elementa vērtību no "Andris" uz "Jēkabs".
+
+
+using System;
+
+namespace Uzdevums3._7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot console aplikāciju, kurā ir definēts string tipa masīvs 
+            //ar sākotnējām vērtībām "Jānis", "Pēteris", "Andris".
+            //Izvadīt uz ekrāna masīva otrā elementa vērtību("Pēteris").
+            //Samainīt masīva 3 elementa vērtību no "Andris" uz "Jēkabs".
+
+            string[] vardi = new string[] { "Janis", "Peteris", "Andris" };
+            int x = 0;
+
+            Console.WriteLine(vardi[1]);
+            vardi[2] = "Jekabs";
+
+            while (x < vardi.Length)
+            {
+                Console.WriteLine(vardi[x]);
+                x++;
+            }
+        }
+    }
+}

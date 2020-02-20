@@ -1,0 +1,60 @@
+Uzrakstīt programmu klasē SortArray, kas aicina lietoāju ievadīt masīva izmēru robežās no
+20 līdz 40
+1) Programma izveido int masīvu ar izmēru, ko saņēma no lietotāja
+2) Masīvs tiek aizpildīts ar gadījuma skaitļiem(int) robežās no 10 līdz 99
+3) Izvadam uz ekrāna visus masīvā esošos skaitļus atdalītus ar komatu un atstarpi
+4) Veicam masīvā esošo elementu kārtošanu augošā secībā(neveidojam jaunu masīvu)
+5) Izvadam uz ekrāna sakārtotos masīva elementus
+
+
+import java.util.Scanner;
+import java.util.Random;
+public class SortArray {
+
+	private static void printInfoLn(String message) {
+		System.out.println(message);
+	}
+	private static void printInfoWithoutLn(String message) {
+		System.out.print(message);
+	}
+	private static int getValidInput (Scanner sc, String message, int min, int max) {
+		int input = - 1;
+		do {
+			printInfoWithoutLn(message);
+			input = sc.nextInt();
+		} while (input < min || input > max);
+		return input;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int input = getValidInput(sc, "Lūdzu ievadi skaitli robežās no 20 līdz 40:", 20, 40);
+		sc.close();
+		int [] array = new int[input];
+		int a = 0;
+		Random rnd = new Random();
+		for (int i = 0; i < input; i++) {
+			int randomInt = 10 + rnd.nextInt(89);
+			array[a] = randomInt; 
+			printInfoWithoutLn(array[a] + ", ");
+				a++;
+			}
+		printInfoLn("");
+			for (int i = 0; i < (input - 1); i++)
+	        {
+	            for (int j = 0; j < (input - i - 1); j++) 
+	            {
+	                int value = 0;
+	                if (array[j] > array[j+1])
+	                {
+	                	value = array[j];			
+	                    array[j] = array[j + 1];
+	                    array[j + 1] = value; 
+	                }   
+	            }  
+	        }
+	        for ( int i = 0; i < input; i++)
+	        { 
+	        	printInfoWithoutLn(array[i] + ", "); 
+	        }	
+	}
+}

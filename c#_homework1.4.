@@ -1,0 +1,21 @@
+Izveidot Console aplikāciju, kura paprasa lietotājam vārdu un izvada to uz ekrāna. 
+(Jāizmanto Console.WriteLine un Console.ReadLine)
+
+
+﻿using System;
+
+namespace Uzdevums1._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot Console aplikāciju, kura paprasa lietotājam vārdu un izvada to uz ekrāna. 
+            //(Jāizmanto Console.WriteLine un Console.ReadLine)
+            Console.WriteLine("Ludzu ievadiet vardu");
+            string vards = Console.ReadLine();
+            Console.WriteLine("Labdien," + vards);
+
+        }
+    }
+}

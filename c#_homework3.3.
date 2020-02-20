@@ -1,0 +1,42 @@
+Deklarēt programmā bool tipa mainīgo, kura sākotnējā vērtība ir TRUE. 
+Izveidot while ciklu, kurš atkārtojas tik ilgi, kamēr mainīgā vērtība ir TRUE. 
+Mainīgā vērtību uz FALSE ir jānomaina, tad, kad cikls ir atkārtojies 20 reizes.
+
+
+﻿using System;
+
+namespace Uzdevums3._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Deklarēt programmā bool tipa mainīgo, kura sākotnējā vērtība ir TRUE. 
+            //Izveidot while ciklu, kurš atkārtojas tik ilgi, kamēr mainīgā vērtība ir TRUE. 
+            //Mainīgā vērtību uz FALSE ir jānomaina, tad, kad cikls ir atkārtojies 20 reizes.
+
+            bool y = true;
+            
+            int n = 0;
+            
+            
+
+            while (y)
+            {
+                Console.WriteLine(y);
+
+                
+
+                if ( n == 20)
+                    {
+
+                    y = !y;
+
+                    }
+                    n++;
+
+                
+            }
+        }
+    }
+}

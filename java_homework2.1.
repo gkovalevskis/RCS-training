@@ -1,0 +1,57 @@
+Uzrakstīt programmu klasē HelloUser, kas
+1) Aicina lietoāju ievadīt kādu vārdu un uzvārdu vienā rindā ar atstarpi
+2) Sadala vārdu un uzvārdu divos mainīgajos.
+3) Vārdu pārveido tā lai tas sāktos ar lielo burtu un visi pārējie būtu mazie burti
+4) Uzvārdu pārveido lai tas viss sastāvētu no lielajiem burtiem
+5) Izvada uz ekrāna pārveidoto vārdu un uzvārdu, katru savā rindiņā ievietotu single
+quote pēdiņās(')
+Hint: Līdzīgi kā String klases metode length() atgriež String garumu, tā metode indexOf
+atgriež kāda noteikta simbola indeksu, kuru jau varam izmantot substring metodē.
+Tie kas vēlas iet dziļāk. Pievienojiet programmai gadījumu apstrādi, ja lietotājs ievadot
+vārdu sākumā ievada atstarpi(vairākas atstarpes), starp vārdu un uzvārdu ieliek vairākas
+atstarpes, apskatiet gadījumu, ja cilvēkam ir divi uzvārdi. Kļūdu apstrāde(ievada tikai vārdu)
+
+
+import java.util.Scanner;
+
+public class HelloUser {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Aicina lietoāju ievadīt kādu vārdu un uzvārdu vienā rindā ar atstarpi
+		System.out.print("Lūdzu ievadi vārdu un uzvārdu vienā rindā ar atstarpi:");
+		String v = sc.nextLine();
+		sc.close();
+		//Sadala vārdu un uzvārdu divos mainīgajos 
+		String t = v.trim();
+		
+		if (!t.contains(" ")) {
+			String z = t.substring(0, 1).toUpperCase();
+			String y = t.substring(1, t.length()).toLowerCase();
+			System.out.println("'" + z + y +"'");
+		}
+		else {
+			int k = t.indexOf(' ');
+			String name = t.substring(0, k).trim();
+			String o = name.substring(0, 1).toUpperCase();
+			String l = name.substring(1, k).trim().toLowerCase();//Vārdu pārveido tā lai tas sāktos ar lielo burtu un 
+			//visi pārējie būtu mazie burti
+			String surename = t.substring(k).trim().toUpperCase();//Uzvārdu pārveido, 
+			//lai tas viss sastāvētu no lielajiem burtiem
+			//Izvada uz ekrāna pārveidoto vārdu un uzvārdu, katru savā rindiņā ievietotu single
+			//quote pēdiņās(')
+			if (surename.contains(" ")) {
+				int b = surename.indexOf(' ');
+				String nameOne = surename.substring(0, b).trim().toUpperCase();
+				String nameTwo = surename.substring(b).trim().toUpperCase();
+				System.out.println("'" + o + l + "'");
+				System.out.println("'" + nameOne + "'");
+				System.out.println("'" + nameTwo + "'");
+			}
+			else {
+				System.out.println("'" + o + l +"'");
+				System.out.println("'" + surename + "'");
+			}
+		}
+	}
+}

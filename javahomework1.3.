@@ -1,0 +1,41 @@
+Uzrakstīt programmu klasē BasicMath
+1) Programma pieprasa no lietotāja ievadīt vienu veselu skaitli un piešķir tā vērtību
+atbilstoša tipa mainīgajam
+2) Programma pieprasa no ievadīt decimālskaitli(ar peldošo komatu) un piešķir tā vērtību
+atbilstošā tipa mainīgajam
+3) Uz erkāna izvada šo skaitļu summu, starpību, dalījumu, reizinājumu un summas
+kvadrātu(summu reizinājums). Katru lielumu izvadam jaunā rindā ar paskaidrojošo
+tekstu.(aizstājot A/B un pārējos)
+“Skaitļu A un B summa ir: SUM”
+“Skaitļu A un B starpība ir: SUB”
+utt
+
+
+import java.util.Scanner;
+
+public class BasicMath {
+
+	public static void main(String[] args) {
+		//Programma pieprasa no lietotāja ievadīt vienu veselu skaitli un piešķir tā vērtību
+		//atbilstoša tipa mainīgajam
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Lūdzu ievadi veselu skaitli:");
+		int number = sc.nextInt();
+		//Programma pieprasa no lietotāja ievadīt decimālskaitli(ar peldošo komatu) un piešķir tā vērtību
+		//atbilstošā tipa mainīgajam
+		System.out.print("Lūdzu ievadi decimālskaitli (ar skaitļiem aiz komata):");
+		String v = sc.next();
+		float fnumber = Float.parseFloat(v);
+		//float f = sc.nextFloat();//nedarbojas, ja ievada vērtību ar komatu?? 
+		sc.close();
+		//Uz erkāna izvada šo skaitļu summu, starpību, dalījumu, reizinājumu un summas
+		//kvadrātu(summu reizinājums). Katru lielumu izvadam jaunā rindā ar paskaidrojošo
+		//tekstu.(aizstājot A/B un pārējos)
+		System.out.println("Skaitļu "+ number +" un " + fnumber + " summa ir: " + (number + (float)fnumber));
+		System.out.println("Skaitļu "+ number +" un " + fnumber + " starpībair: " + (number - (float)fnumber));
+		System.out.println("Skaitļu "+ number +" un " + fnumber + " dalījums ir: " + (number / (float)fnumber));
+		System.out.println("Skaitļu "+ number +" un " + fnumber + " reizinājums ir: " + (number * (float)fnumber));
+		System.out.println("Skaitļu "+ number +" un " + fnumber + " summas kvadrāts ir: " + (number * number + 2 * number * (float)fnumber + (float)fnumber * (float)fnumber));//a2+2ab+b2
+	}
+
+}

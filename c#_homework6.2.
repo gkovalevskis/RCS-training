@@ -1,0 +1,34 @@
+Definēt metodi PrintMyName ar diviem string parametriem name un surname. 
+Izsaucot metodi jāizdrukā teksts N. Surname (vārda pirmais burts + uzvārds); 
+evades parametrus metode var saņemt no lietotāja vai tie var būt definēti iepriekš izmantojot mainīgos.
+
+﻿using System;
+
+namespace Uzdevums6._2
+{
+    class Program
+    {
+        public static void PrintMyName(string name, string surname)
+        {
+            string x = name.Substring(0, 1);
+            Console.WriteLine($"{x}.{surname}");
+            
+        }
+        static void Main(string[] args)
+        {
+            //Definēt metodi PrintMyName ar diviem string parametriem name un surname.
+            //Izsaucot metodi jāizdrukā teksts N.Surname(vārda pirmais burts + uzvārds); 
+            //Ievades parametrus metode var saņemt no lietotāja vai tie var būt definēti iepriekš izmantojot mainīgos.
+
+            Console.WriteLine("Ludzu ievadiet Jusu vardu:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Ludzu ievadiet uzvardu:");
+            string surname = Console.ReadLine();
+            
+            PrintMyName(name, surname);
+            
+
+        }
+
+    }
+}

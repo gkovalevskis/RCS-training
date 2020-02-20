@@ -1,0 +1,73 @@
+Mums ir māja ar 5 stāviem un pagrabu. Lietotājam tiek paprasīts ievadīt mājas priekšmetu, piemēram, “galds”, 
+un mūsu programmai ir jāizvada, kurā stāvā šis priekšmets tiks novietots. Nosacījumi priekšmeta novietšanai ir: 
+Priekšmeti, kuri sākas ar burtiem a,b,c,d tiks novietoti 1. Stāvā. Priekšmeti, kuri sākas ar burtiem e,f,g,h tiks novietoti 
+2. Stāvā. Nākamie burti attiecīgi 3., 4. un 5. stāvā. Visi pārējie priekšmeti tiks novietoti pagrabā.
+
+
+using System;
+
+namespace Uzdevums2._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Mums ir māja ar 5 stāviem un pagrabu.
+            //Lietotājam tiek paprasīts ievadīt mājas priekšmetu, piemēram, “galds”, 
+            //un mūsu programmai ir jāizvada, kurā stāvā šis priekšmets tiks novietots. 
+            //Nosacījumi priekšmeta novietšanai ir: 
+            //Priekšmeti, kuri sākas ar burtiem a,b,c,d tiks novietoti 1.Stāvā.
+            //Priekšmeti, kuri sākas ar burtiem e,f,g,h tiks novietoti 2.Stāvā.
+            //Nākamie burti attiecīgi 3., 4.un 5.stāvā.Visi pārējie priekšmeti tiks novietoti pagrabā.
+
+            Console.WriteLine("Ludzu ievadiet majas prieksmetu:");
+            string prieksmets = Console.ReadLine();
+            string x = prieksmets.Substring(0, 1);
+
+
+            //pirmais stavs
+            if (x == "a" || x == "b" || x == "c" || x == "d")
+            {
+                Console.WriteLine("Tiks novietots 1.stava");
+            }
+
+
+            //otrais stavs
+            else if (x == "e" || x == "f" || x == "g" || x == "h")
+            {
+                Console.WriteLine("Tiks novietots 2.stava");
+            }
+
+
+            //tresais stavs
+
+            else if (x == "i" || x == "j" || x == "k" || x == "l")
+            {
+                Console.WriteLine("Tiks novietots 3.stava");
+            }
+
+
+            //ceturtais stavs
+
+            else if (x == "m" || x == "n" || x == "o" || x == "p")
+            {
+                Console.WriteLine("Tiks novietots 4.stava");
+            }
+
+
+            //piektais stavs
+
+            else if (x == "r" || x == "s" || x == "t" || x == "v")
+            {
+                Console.WriteLine("Tiks novietots 5.stava");
+            }
+
+                      
+            else
+            {
+                Console.WriteLine("Tiks novietots pagraba");
+            }
+
+        }
+    }
+}

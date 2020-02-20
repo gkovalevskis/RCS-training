@@ -1,0 +1,71 @@
+Izveidot divas metodes GetNameSurname un PrintNameSurname. 
+Metodei GetNameSurname ir no lietotāja jāpaprasa vārds uzvārds un kā string jāatgriež metodei PrintNameSurname, 
+kura šo tekstu izdrukās console.
+
+6.3 uzdevums
+100/100
+100 balles no 100
+
+Jānis Lācis
+14. janv.
+Izveidot divas metodes GetNameSurname un PrintNameSurname. Metodei GetNameSurname ir no lietotāja jāpaprasa vārds uzvārds un kā string jāatgriež metodei PrintNameSurname, kura šo tekstu izdrukās console.
+Mācību priekšmeta komentāri
+
+Jūsu darbs
+Novērtēts
+
+Program.cs
+Teksts
+4 privāti komentāri
+
+Girts Kovalevskis17. janv.
+Nododu melnrakstu, jo nesaprotu kā atgriezt divas vērtības un nesanāk palaist PrintNameSurname.
+
+Jānis Lācis17. janv.
+Divas vērtības ar return nevajag atgriezt.
+Neviens nav teicis, ka tu droši nevari tās vērtības apvienot un atgriezt kā vienu mainīgo.
+Print metode ir korekta (tik tad uzliec vienu parametru, nevis divus).
+
+Girts Kovalevskis17. janv.
+Paldies, salaboju.
+
+Jānis Lācis17. janv.
+Viss kārtībā!
+
+
+﻿using System;
+
+namespace Uzdevums6._3
+{
+    class Program
+    {
+        public static string GetNameSurname()
+        {
+            Console.WriteLine("Ludzu ievadiet Jusu vardu:");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Ludzu ievadiet uzvardu:");
+            string surname = Console.ReadLine();
+            string nameSurname = $"{name} {surname}";
+            return (nameSurname);
+
+
+        }
+        public static void PrintNameSurname(string nameSurname)
+        {
+            
+            Console.WriteLine(nameSurname);
+            
+        }
+        static void Main(string[] args)
+        {
+            //Izveidot divas metodes GetNameSurname un PrintNameSurname. 
+            //Metodei GetNameSurname ir no lietotāja jāpaprasa vārds uzvārds un 
+            //kā string jāatgriež metodei PrintNameSurname, kura šo tekstu izdrukās console.
+
+
+            string jaunaVertiba = GetNameSurname();//saglabāju vērtību, jo notiek šīs metodes atgriešana "return"
+            PrintNameSurname(jaunaVertiba);
+        }
+    }
+}

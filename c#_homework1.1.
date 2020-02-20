@@ -1,0 +1,17 @@
+Izveidot consoles aplikāciju, kura uz ekrāna izdrukās jūsu vārdu un uzvārdu. Nav nepieciešams neko ievadīt no konsoles.
+
+
+using System;
+
+namespace diena1uzdevumi
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot consoles aplikāciju, kura uz ekrāna izdrukās jūsu vārdu un uzvārdu. 
+            //Nav nepieciešams neko ievadīt no konsoles.
+            Console.WriteLine("Girts Kovalevskis");
+        }
+    }
+}

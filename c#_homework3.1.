@@ -1,0 +1,26 @@
+Izveidot consoles aplikāciju, kurā ir definēts int masīvs ar vērtībām 1,6,7,78,9,9
+
+
+﻿using System;
+
+namespace Uzdevums3._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot consoles aplikāciju, kurā ir definēts int masīvs ar vērtībām 1,6,7,78,9,9
+
+            int[] masivs = new int[] { 1, 6, 7, 78, 9, 9 };
+            int n = masivs.Length;
+            Console.WriteLine($"Masiva vertibu skaits ir {n}");
+            Console.WriteLine($"Masiva masiva 1.vertiba ir {masivs[0]}");
+            Console.WriteLine($"Masiva masiva 2.vertiba ir {masivs[1]}");
+            Console.WriteLine($"Masiva masiva 3.vertiba ir {masivs[2]}");
+            Console.WriteLine($"Masiva masiva 4.vertiba ir {masivs[3]}");
+            Console.WriteLine($"Masiva masiva 5.vertiba ir {masivs[4]}");
+            Console.WriteLine($"Masiva masiva 6.vertiba ir {masivs[5]}");
+
+        }
+    }
+}

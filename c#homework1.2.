@@ -1,0 +1,30 @@
+Deklarēt programmā 4 mainīgos, katru ar savu datu tipu (int, double, bool, string). 
+Diviem no viņiem piešķirt vērtību uzreiz pie deklarēšanas, 2 vēlāk programmā. Izdrukāt piešķirtās vērtības uz ekrāna.
+
+
+using System;
+
+namespace diena1uzdevumi
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Deklarēt programmā 4 mainīgos, katru ar savu datu tipu (int, double, bool, string). 
+            //Diviem no viņiem piešķirt vērtību uzreiz pie deklarēšanas, 2 vēlāk programmā. 
+            //Izdrukāt piešķirtās vērtības uz ekrāna.
+            int n;
+            double z = 8.99;          
+            bool stravaIr;
+            string vards = "Girts";
+
+            n = 1 + 3;
+            stravaIr = true;
+
+            Console.WriteLine(n);
+            Console.WriteLine(z);
+            Console.WriteLine(stravaIr);
+            Console.WriteLine(vards);
+        }
+    }
+}

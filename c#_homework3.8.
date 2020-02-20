@@ -1,0 +1,33 @@
+Izveidot console aplikāciju, kurā ir definēts nedēļas dienu enum (Enumerātors). 
+Deklarēt programmā jaunu mainīgo, kā datu tipu tam norādot izveidoto enum un piešķirt vērtību "Piektdiena"
+
+
+using System;
+
+namespace Uzdevums3._8
+{
+    enum nedelasDienas
+    {
+        Pirmdiena,
+        Otrdien,
+        Tresdiena,
+        Ceturtdiena,
+        Piektdiena,
+        Sestdiena,
+        Svetdien
+    } 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot console aplikāciju, kurā ir definēts nedēļas dienu enum (Enumerātors). 
+            //Deklarēt programmā jaunu mainīgo, 
+            //kā datu tipu tam norādot izveidoto enum un piešķirt vērtību "Piektdiena"
+
+            int vienaDiena = 4;
+            nedelasDienas diena = (nedelasDienas)vienaDiena;
+            Console.WriteLine(diena);
+
+        }
+    }
+}

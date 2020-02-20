@@ -1,0 +1,30 @@
+Definēt int masīvu ar 10 elementiem { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8 }. 
+Drukājam vērtības console logā, tik ilgi kamēr sastopam vērtību 22. 
+Pēc vērtības 22 sasniegšanas cikls ir jāpārtrauc.
+
+using System;
+
+namespace Uzdevums5._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Definēt int masīvu ar 10 elementiem { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8 }. 
+            //Drukājam vērtības console logā, tik ilgi kamēr sastopam vērtību 22.
+            //Pēc vērtības 22 sasniegšanas cikls ir jāpārtrauc.
+
+            int[] skaitli = { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8 };
+
+            for (int i = 0; i < skaitli.Length; i++)
+            {
+                Console.WriteLine(skaitli[i]);
+
+                if (skaitli[i] == 22)
+                {
+                    break;
+                }
+            }
+        }
+    }
+}

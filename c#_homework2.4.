@@ -1,0 +1,71 @@
+Izveidot konsoles aplikāciju. Likt ievadīt divus spēles dalībnieku vārdus. 
+Tad lūgt 3 reizes ievadīt pirmā spēlētāja punktus un pēc tam 3 reizes ievadīt otrā spēlētāja punktus. 
+Izvadīt tā spēlētāja vārdu, kuram ir visvairāk punktu.
+
+
+
+using System;
+
+namespace Cietaisrieksts2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+            //Izveidot konsoles aplikāciju. Likt ievadīt divus spēles dalībnieku vārdus. 
+            //Tad lūgt 3 reizes ievadīt pirmā spēlētāja punktus un pēc tam 3 reizes ievadīt otrā spēlētāja punktus. 
+            //Izvadīt tā spēlētāja vārdu, kuram ir visvairāk punktu.
+
+            Console.WriteLine("Please enter first player name:");
+            string player1 = Console.ReadLine();
+            
+
+            Console.WriteLine("Please enter secound player name:");
+            string player2 = Console.ReadLine();
+            
+
+            Console.WriteLine("Please enter first player points in game 1:");
+            string pointGameOneFirst = Console.ReadLine();
+            int x1 = int.Parse(pointGameOneFirst);
+
+            Console.WriteLine("Please enter first player points in game 2:");
+            string pointGameTwoFirst = Console.ReadLine();
+            int x2 = int.Parse(pointGameTwoFirst);
+
+            Console.WriteLine("Please enter first player points in game 3:");
+            string pointGameThreeFirst = Console.ReadLine();
+            int x3 = int.Parse(pointGameThreeFirst);
+
+            Console.WriteLine("Please enter secound player points in game 1:");
+            string pointGameOneSec = Console.ReadLine();
+            int y1 = int.Parse(pointGameOneSec);
+
+            Console.WriteLine("Please enter secound player points in game 2:");
+            string pointGameTwoSec = Console.ReadLine();
+            int y2 = int.Parse(pointGameTwoSec);
+
+            Console.WriteLine("Please enter secound player points in game 3:");
+            string pointGameThreeSec = Console.ReadLine();
+            int y3 = int.Parse(pointGameThreeSec);
+
+            int a = x1 + x2 + x3;
+
+            int b = y1 + y2 + y3;
+
+            
+            if (a > b)
+            {
+                Console.WriteLine($"More points were scored {player1}");
+            }
+
+            else 
+            {
+                Console.WriteLine($"More points were scored {player2}");
+            }
+
+            
+        }
+    }
+}

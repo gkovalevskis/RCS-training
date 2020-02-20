@@ -1,0 +1,56 @@
+Definēt int masīvu ar 12 elementiem { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8, 43, 56 }. 
+Izdrukāt skaitļus console logā sadalot tos trijās grupās. Skaitļi robežās no 0-30, 31-60, 61-90. 
+*nav nepieciešams izdomāt kā kārtot, tas būs sarežģīti, izmantojiet papildus ciklus. 
+Tātad vajag izdrukāt sākumā visus tos ar pirmo robežu, tad tikai ar otro un tad visus skaitļus, kas atbilst trešajai robežai.
+
+
+using System;
+
+namespace Uzdevums5._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Definēt int masīvu ar 12 elementiem { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8, 43, 56 }. 
+            //Izdrukāt skaitļus console logā sadalot tos trijās grupās. 
+            //Skaitļi robežās no 0 - 30, 31 - 60, 61 - 90. * nav nepieciešams izdomāt kā kārtot, 
+            //tas būs sarežģīti, izmantojiet papildus ciklus. 
+            //Tātad vajag izdrukāt sākumā visus tos ar pirmo robežu, tad tikai ar otro un tad visus skaitļus, 
+            //kas atbilst trešajai robežai.
+
+            int[] masivs = new int[] { 1, 56, 77, 89, 34, 22, 2, 3, 4, 8, 43, 56 };
+
+            Console.WriteLine("Skaitļi 0 - 30");
+
+            for (int i = 0; i < masivs.Length; i++)
+            {
+                if (masivs[i] > 0 && masivs[i] < 30)
+                {
+                    Console.WriteLine(masivs[i]);
+                }
+            }
+
+            Console.WriteLine("Skaitļi 31 - 60");
+
+            for (int i = 0; i < masivs.Length; i++)
+            {
+                if (masivs[i] > 30 && masivs[i] < 60)
+                {
+                    Console.WriteLine(masivs[i]);
+                }
+            }
+
+            Console.WriteLine("Skaitļi 61 - 90");
+
+            for (int i = 0; i < masivs.Length; i++)
+            {
+                if (masivs[i] > 60 && masivs[i] < 90)
+                {
+                    Console.WriteLine(masivs[i]);
+                }
+            }
+         
+        }
+    }
+}

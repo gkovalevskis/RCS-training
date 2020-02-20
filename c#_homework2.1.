@@ -1,0 +1,49 @@
+Izveidot consoles aplikāciju, kura no lietotāja paparasa divas vērtības. 
+Programmā ir jāpanāk šo divu vērtību summēšana (nepieciešams izmantot int.Parse, vai Convert.ToInt32). 
+Pirms vērtību summēšanas ir jāpanāk, ka vērtībai x ir jābūt robežās no 0 līdz 20. Vērtībai y ir jābūt robežās no 30 līdz 50. 
+Ja ievadītais skaitlis nav šajās robežās uz ekrāna ir jāizvada atbilstošs paziņojums. 
+Līdz ar to, ja skaitļi nav atbilstošās robežās, tad izvadam kļūdas paziņojumu, un tikai tad, ja abi skaitļi pareizi, izvadam summu.
+
+
+﻿using System;
+
+namespace jauns2._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot consoles aplikāciju, kura no lietotāja paparasa divas vērtības. 
+            //Programmā ir jāpanāk šo divu vērtību summēšana(nepieciešams izmantot int.Parse, vai Convert.ToInt32).
+            //Pirms vērtību summēšanas ir jāpanāk, 
+            //ka vērtībai x ir jābūt robežās no 0 līdz 20.
+            //Vērtībai y ir jābūt robežās no 30 līdz 50.
+            //Ja ievadītais skaitlis nav šajās robežās uz ekrāna ir jāizvada atbilstošs paziņojums.
+
+            Console.WriteLine("Ludzu ievadiet pirmo vertibu no 0 lidz 20:");
+            string vertibaViens = Console.ReadLine();
+            int x = int.Parse(vertibaViens);
+
+            Console.WriteLine("Ludzu ievadiet otro vertibu no 30 lidz 50:");
+            string vertibaDivi = Console.ReadLine();
+            int y = int.Parse(vertibaDivi);
+            int summa = x + y;
+
+            if (x >= 0 && x <= 20 && y >= 30 && y <= 50)
+            {
+                
+                Console.WriteLine($"Ievadito skaitlu summa ir: { vertibaViens} + { vertibaDivi} = { summa}");
+            }
+
+                               
+            else 
+            {
+                Console.WriteLine("Kada no vertibam nav ievadita pareizi. Megini velreiz!");
+
+            }
+
+
+            
+        }
+    }
+}

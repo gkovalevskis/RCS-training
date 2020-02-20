@@ -6,24 +6,15 @@ vecumu(AGE) ar augstāk definētajiem mainīgajiem.
 “Sveiki, mani sauc NAME esmu AGE gadus jauns/jauna!”
 
 
-import java.util.Scanner;
-
-public class GreetingsInteractive {
+public class Greetings {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		//jāizvada teksts, kurš aicina lietotāju ievadīt savu vārdu, sagaidām no lietotāja ievadi,
-		//ko piešķiram atbilstoša tipa mainīgajam.
-		System.out.print("Lūdzu ievadi savu vārdu:");
-		String name = sc.nextLine();
-		//pēc līdzīga principa kā iepriekšējā punktā, pieprasam lietotāja vecumu
-		System.out.print("Lūdzu ievadi savu vecumu (pilnos gados):");
-		int age = sc.nextInt();
-		sc.close();
+		//definē mainīgo ar tipu String un sākumvērtību, kas ir Tavs vārds.
+		String name = "Ģirts";
+		//definē mainīgo ar tipu int,kura sākumvērtība ir Tavs vecums pilnos gados.
+		int age = 44;
 		//Izvadīt paziņojumu uz ekrāna-konsolē, kas noformēts aizstājot vārdu(NAME) un
 		//vecumu(AGE) ar augstāk definētajiem mainīgajiem.
 		System.out.println("Sveiki, mani sauc " + name + " esmu " + age + ".gadus jauns!");
-
 	}
-
 }

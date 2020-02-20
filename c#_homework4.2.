@@ -1,0 +1,47 @@
+Deklarēt int[] - masīvu int[] numbers = { 1, 3, 4, 8, 0, 23 }; 
+Izdrukāt uz ekrāna visas masīva elementu vērtības un pēc tam tikai tās vērtības, kuras lielākas par 5.
+
+
+using System;
+
+namespace Uzdevums4._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Deklarēt int[] -masīvu int[] numbers = { 1, 3, 4, 8, 0, 23 }; 
+            //Izdrukāt uz ekrāna visas masīva elementu vērtības un pēc tam tikai tās vērtības, kuras lielākas par 5.
+
+            int[] numbers = new int[] { 1, 3, 4, 8, 0, 23 };
+            int z = 0;
+
+
+            while (z < numbers.Length)
+            {
+
+                Console.WriteLine(numbers[z]); //DRKĀ VISAS VĒRTĪBAS
+                z++;
+
+            }
+
+
+
+            while (z < numbers.Length)
+            {
+
+                int y = numbers[z];
+
+                if (y > 5)
+                {
+                    Console.WriteLine(numbers[z]); //DRUKĀ VĒRTĪBAS, KURAS LIELĀKAS PAR 5
+
+                }
+                z++;
+
+            }
+
+
+        }
+    }
+}

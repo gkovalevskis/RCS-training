@@ -1,0 +1,89 @@
+
+Uzrakstīt klasi Main, kas izveido objektus:
+1. Taisnstūris ar garumu 5, platums 4:
+  a. isSquare -> false;
+  b. area - > 20;
+  c. perimeter -> 18;
+  d. toString -> ...
+2. Taisnstūris ar garumu 3, platums 8:
+  a. isSquare -> false;
+  b. area - > 24;
+  c. perimeter -> 22;
+  d. toString -> ...  
+3. Kvadrāts ar malas garumu 6:
+  a. isSquare -> true;
+  b. area - > 36;
+  c. perimeter -> 24;
+  d. toString -> ...  
+  
+Uzrakstīt klasi Rectangle:
+
+1. Īpašības (fields): garums, platums;
+2. Metodes:
+  a. isSquare() -> atgriež ir vai nav kvadrāts;
+  b. area() -> atgriež laukumu;
+  c. perimeter() _> atgriež perimetru.
+3. Implementēt toString();
+4. Konstruktori:
+  a. noklusētais;
+  b. ar parametriem: garums, platums;
+  c. ar parametriem: mala (kvadrāts).
+  
+
+  
+  
+
+package one;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Rectangle one = new Rectangle(5, 4);
+		System.out.println(one);
+		Rectangle two = new Rectangle(3, 8);
+		System.out.println(two);
+		Rectangle three = new Rectangle(6);
+		System.out.println(three);
+	}
+}
+
+package one;
+
+public class Rectangle {
+
+	private int length;
+	private int width;
+
+	public Rectangle() {
+		//this(0);
+	}
+
+	public Rectangle(int length, int width) {
+		this.length = length;
+		this.width = width;
+	}
+
+	public Rectangle(int side) {
+		this.length = side;
+		this.width = side;
+		//this(side, side);
+	}
+
+	public boolean isSquare() {
+		return length == width;
+	}
+
+	public int area() {
+		return length * width;
+	}
+
+	public int perimeter() {
+		return 2 * length + 2 * width;
+	}
+
+	@Override
+	public String toString() {
+		return "Length: " + length + ", width: " + width + ", square - " + isSquare() + ", area: " + area()
+				+ ", perimeter: " + perimeter();
+	}
+}

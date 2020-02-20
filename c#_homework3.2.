@@ -1,0 +1,41 @@
+Izveidot console aplikāciju, kura paprasa lietotājam vai viņš grib pusdienas. 
+Ja lietotājs ir ievadījis TRUE, tad uz ekrāna izdrukāt "Jūsu pusdienas ir gatavas", ja lietotājs ir ievadījis FALSE, 
+tad "Jums pusdienas nebūs". IF ELSE nosacījumā ir jāizmanto bool tipa mainīgais, nevis string tipa mainīgais. 
+Lai no lietotāja ievadītā teksta iegūtu bool tipa mainīgo ir jāizmanto bool.Parse, līdzīgi kā ar konvertēšanu uz veselu skaitli.
+
+
+﻿using System;
+
+namespace Uzdevums3._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Izveidot console aplikāciju, kura paprasa lietotājam vai viņš grib pusdienas.
+            //Ja lietotājs ir ievadījis TRUE, tad uz ekrāna izdrukāt "Jūsu pusdienas ir gatavas", 
+            //ja lietotājs ir ievadījis FALSE, tad "Jums pusdienas nebūs".
+            //IF ELSE nosacījumā ir jāizmanto bool tipa mainīgais, nevis string tipa mainīgais.
+            //Lai no lietotāja ievadītā teksta iegūtu bool tipa mainīgo ir jāizmanto bool.Parse, 
+            //līdzīgi kā ar konvertēšanu uz veselu skaitli.
+
+            Console.WriteLine("Vai gribi pusdienas? (izmantot true vai false)");
+            string input1 = Console.ReadLine();
+            bool y = bool.Parse(input1);
+            
+
+
+            if (!y)
+
+            {
+                Console.WriteLine($"Jums pusdienas nebus");
+            }
+
+            else
+            {
+                Console.WriteLine($"Jusu pusdienas ir gatavas");
+            }
+
+        }
+    }
+}

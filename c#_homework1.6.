@@ -1,0 +1,25 @@
+Izveidot programmu, kurā definēti 4 string tipa mainīgie. Izmantot 3 dažādus string konkatinācijas (apvienošanas) veidus, 
+lai tos apvienotu kopā un izdrukātu uz ekrāna.
+1. veids = izmantot +
+2. veids = $" {str1} {str2} "
+3. veids = izmantot metodi String.Format("Kaut kāds teksts {0} un {1}", str1, str2)
+
+
+﻿using System;
+
+namespace Uzdevums1._61
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string laiks = "ziema";
+            string kontinents = "eiropa";
+            string valsts = "latvija";
+            string pilseta = "riga";
+            Console.WriteLine(laiks + kontinents + valsts + pilseta);
+            Console.WriteLine($"{laiks} {kontinents} {valsts} {pilseta}");
+            Console.WriteLine(string.Format($"gadalaiks {0} ir ari {1} ta pat, ka {valsts} un ari {pilseta}"));
+        }
+    }
+}

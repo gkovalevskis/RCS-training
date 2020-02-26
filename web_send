@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		IOSC send
+		</title>
+		<script src="nd_script3.js"></script>
+		<script src="nd_script4.js"></script>
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs1.css"/>
+		</head>
+	<body>
+		<nav class="nav">
+		<img src="sale.jpg" class="logo_image"/>
+			<ul class="ul_nav">
+				<li>
+					<a href="index.php">Home</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_photography.php">Photography</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_reviews.php">Reviews</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_shipping.php">Shipping</a>
+				</li>
+				<li class = "selected">
+					<a href="nosleguma_darbs_send.php">Send</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_comment.php">Comment</a>
+				</li>
+			</ul>
+		</nav>
+		<h1 onmouseover="makeSmall(this)" onmouseleave="makeBig(this)">SEND</h1>
+		<br />
+		<a>
+			<div>
+				<button id="button" onclick="transitionPosition()">
+				<img src=vestule_poga_pirksts.jpg>
+				</button>
+		    </div>
+		</a>	
+	</body>

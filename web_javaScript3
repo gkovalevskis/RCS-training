@@ -1,0 +1,6 @@
+function transitionPosition(){
+	let btn = document.getElementById("button");//definējam elementu pēc id="button";
+	btn.style.position = "relative";//definējam button sakotnejo stāvokli
+	btn.style.top = Math.random() * 200 + "px";//definējam cik daudz button var parvietoties uz augšu
+	btn.style.left = Math.random() * 1200 + "px";//definējam cik daudz button var parvietoties pa kreisi
+}

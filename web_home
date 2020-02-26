@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		Internet online sales channels
+		</title>
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs1.css"/>
+	</head>
+	<body>
+		<nav class="nav">
+		<img src="sale.jpg" class="logo_image"/>
+			<ul class="ul_nav">
+				<li class = "selected">
+					<a href="index.php">Home</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_photography.php">Photography</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_reviews.php">Reviews</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_shipping.php">Shipping</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_send.php">Send</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_comment.php">Comment</a>
+				</li>
+			</ul>
+		</nav>
+		<div>
+			<h1>INTERNET ONLINE SALES CHANNELS</h1>
+			<br />
+			<div id="left">
+				<a href="https://www.amazon.com/">
+				<img src="amazon.jpg"/>
+				</a>
+				<br />
+				<p>Simplify customers' lives.
+				At Amazon, the focus is on customers. 
+				The goal is to simplify their lives and contribute to their success. 
+				Amazon offers services that many are already using: customers who shop at Amazon; 
+				Entrepreneurs who offer their products and inventions to millions of users; 
+				Authors who publish books without a publisher; 
+				Filmmakers who reach their viewers or developers who realize their ideas through Amazon. 
+				Amazon partners can concentrate on the essentials: 
+				their products, their content, their innovations.
+				</p>
+				<a href="https://www.etsy.com/">			
+				<img src="etsy.jpg"/>
+				</a>
+				<br />
+				<p>Etsy is the global marketplace for unique and creative goods. 
+				It’s home to a universe of special, extraordinary items, from unique handcrafted pieces 
+				to vintage treasures.In a time of increasing automation, it’s our mission to keep human 
+				connection at the heart of commerce. That’s why we built a place where creativity lives 
+				and thrives because it’s powered by people. We help our community of sellers turn their 
+				ideas into successful businesses. Our platform connects them with millions of buyers looking for 
+				an alternative—something special with a human touch, for those moments in life that deserve imagination.
+				As a company, we strive to lead with our guiding principles and to help spread 
+				ideas of sustainability and responsibility whose impact can reach far beyond our own business.
+				</p>
+				<a href="https://www.zibbet.com/">
+				<img src="zibbet.jpg"/>
+				</a>
+				<br />
+				<p>Our own journey started in 2009, when we launched the Zibbet Marketplace. 
+				Our mission was the same as it is today – to help creative entrepreneurs sell more. 
+				Over the years, as we witnessed new marketplaces popping up, it became clear to us that if we were 
+				to really achieve our mission we had to give sellers an easy way to take advantage of this changing 
+				industry. With the ability to sell everywhere and manage everything from one place, sellers are able 
+				to get their products in front of more customers and have the best chance of success.
+				</p>
+			</div>	
+			<br />
+			<div id="right">
+				<a href="https://www.ebay.com/">
+				<img src="ebay.jpg"/>
+				</a>
+				<br />
+				<p>eBay Inc. (Nasdaq: EBAY) is a global commerce leader including the Marketplace, 
+				StubHub and Classifieds platforms. Collectively, we connect millions of buyers and sellers around 
+				the world, empowering people and creating opportunity for all. Founded in 1995 in San Jose, 
+				California, eBay is one of the world’s largest and most vibrant marketplaces for 
+				discovering great value and unique selection. In 2019, eBay enabled $90 billion of 
+				gross merchandise volume. For more information about the company and its global portfolio 
+				of online brands.
+				</p>
+				<br />
+				<a href="https://www.bonanza.com/">
+				<img src="bonanza.jpg"/>
+				</a>
+				<br />
+				<p>Bonanza is an online marketplace that empowers entrepreneurs to build a sustainable business based 
+				on repeat customers. Our product is built by entrepreneurs, for entrepreneurs -- 
+				we understand what it means to be too busy to sweat the small stuff. 
+				We aim to remove the technical expertise needed to build a profitable online business, 
+				making the joys of entrepreneurship accessible for all. Experience has proven to us that listening to 
+				our sellers' feedback is the best opportunity we have to consistently improve our product. 
+				That's why we've developed various tools over the years to make online selling easy. 
+				Our business relies on making successful sellers, so it's not a coincidence that the tools we offer 
+				can be customized to fit our sellers' needs.
+				</p>
+			<br />	
+				<a href="https://www.newegg.com/">
+				<img src="newegg.jpg"/>
+				</a>
+				<br />
+				<p>Newegg Inc. is the leading tech-focused e-retailer in North America, 
+				with a global reach into more than 80 countries in Europe, Asia Pacific, Latin America and the Middle East. 
+				Founded in 2001, the company offers its tens of millions of registered users a comprehensive selection 
+				of the latest consumer electronics, entertainment, smart home and gaming products. 
+				Newegg is consistently ranked as one of the best online shopping destinations, and the company 
+				regularly earns industry-leading customer service ratings. Newegg is headquartered in City of Industry, 
+				California, with North American distribution facilities located throughout the United States and Canada.
+				</p>
+			<br />
+			</div>
+			<br />
+			<footer id="footer">
+				<p>Created by: Girts Kovalevskisevskis</p>
+				<p>Contact information girts.kovalevskis@gmail.com</p>
+				<p>©Girts Kovalevskis 2020©</p>
+			</footer>
+		</div>	
+	</body>
+</html>

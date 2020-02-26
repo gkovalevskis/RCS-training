@@ -1,0 +1,41 @@
+Izveidot static metodi CalculateSum atsevišķā failā. Metodei , kā parametri ir jāsaņem divas int vērtības x un y. 
+Šai metodei ir jāatgriež šo skaitļu summa. Šo metodi ir jāizmanto vairākas reizes galvenajā programmas metodē.
+
+
+﻿using System;
+
+namespace Uzdevums7._5
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            //Izveidot static metodi CalculateSum atsevišķā failā. 
+            //Metodei, kā parametri ir jāsaņem divas int vērtības x un y.
+            //Šai metodei ir jāatgriež šo skaitļu summa.
+            //Šo metodi ir jāizmanto vairākas reizes galvenajā programmas metodē.
+
+            Console.WriteLine(CalculateSumm.CalculateSum(2, 6));
+            Console.WriteLine(CalculateSumm.CalculateSum(99, 435));
+            Console.WriteLine(CalculateSumm.CalculateSum(2124, 756));
+
+        }
+    }
+}
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Uzdevums7._5
+{
+    public static class CalculateSumm
+    {
+        public static int CalculateSum(int x, int y)
+        {
+            return x + y;
+        } 
+    }
+}

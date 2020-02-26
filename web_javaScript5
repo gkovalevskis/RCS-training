@@ -1,0 +1,8 @@
+function validateForm(){
+	let name = document.getElementById("name").value;//piešķir mainīgo elementam, kura Id="name";
+	let comment = document.getElementById("comment").value;//piešķir mainīgo elementam, kura Id="comment";
+	if(name == "" || comment == ""){//ja viens vai otrs mainīgais ir tukšs
+		alert("Please fill fields on the page before click submit!");//izvada paziņojumu
+		return false;//atgriež false
+	}
+}

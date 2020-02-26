@@ -1,0 +1,122 @@
+Izveidot konsoles aplikāciju, kurā ievada no konsoles cilvēka personas kodu. 
+Izveidot divas metodes – ValidatePersonId(string personId) un PrintBirthday(string personId).
+ValidatePersonId – saņemot personas kodu, pārbauda, ka personas koda garums ir precīzi 12 un ka domu zīme atrodas pareizajā vietā tekstā. 
+(Izmantojam vai nu Substring vai teksta uztveršanu kā masīva simbolu)
+PrintBirthday – saņemot personas kodu, nepieciešams izņemt ārā dzimšanas datumu, mēnesi un gadu. 
+Piemēram ievadē 120594-12345 izdrukātos – 12. maija 1994. gads. 
+Izmantojam teksta uztveršanu kā masīvu vai Substring, lai saņemtu konkrētus 2 elementus blakus. 
+Savukārt, apstrādātu mēnesi izmantojam switch, kad ar katru skaitli tiktu piemeklēts mēnesis, jeb “05” -> maijs. 
+Lai izvadītu gadu pieņemsim, ka, ja PK gads ir lielāks par 19 tad rakstam, piemēram 1920. gads. 
+Taču, ja gads ir mazāks par 20, tad rakstam 2019. gads
+
+
+﻿using System;
+
+namespace jauns7._6
+{
+    class Program
+    {
+        
+
+        static void Main(string[] args)
+        {
+            //Izveidot konsoles aplikāciju, kurā ievada no konsoles cilvēka personas kodu.
+            //Izveidot divas metodes – ValidatePersonId(string personId) un PrintBirthday(string personId).
+            //ValidatePersonId – saņemot personas kodu, pārbauda, ka personas koda garums ir precīzi 12
+            //un ka domu zīme atrodas pareizajā vietā tekstā. 
+            //(Izmantojam vai nu Substring vai teksta uztveršanu kā masīva simbolu)
+            //PrintBirthday – saņemot personas kodu, nepieciešams izņemt ārā dzimšanas datumu, mēnesi un gadu.
+            //Piemēram ievadē 120594 - 12345 izdrukātos – 12.maija 1994.gads.
+            //Izmantojam teksta uztveršanu kā masīvu vai Substring, lai saņemtu konkrētus 2 elementus blakus. 
+            //Savukārt, apstrādātu mēnesi izmantojam switch, kad ar katru skaitli tiktu piemeklēts mēnesis, 
+            //jeb “05” -> maijs.
+            //Lai izvadītu gadu pieņemsim, ka, ja PK gads ir lielāks par 19 tad rakstam, piemēram 1920.gads.
+            //Taču, ja gads ir mazāks par 20, tad rakstam 2019.gads
+
+
+            Console.WriteLine("Lūdzu ievadiet savu personas kodu:");
+            string personId = Console.ReadLine();
+            if (ValidatePersonId(personId))
+            {
+                PrintBirthday(personId);
+            }
+        }
+        public static bool ValidatePersonId(string personId)
+        {
+            if (personId.Length != 12)
+            {
+                Console.WriteLine("KĻŪDA! Personas kodam ir jābūt 12 simbolu garam:");
+                return false;
+            }
+            else if (personId.Substring(6, 1) != "-")
+            {
+                Console.WriteLine("KĻŪDA! Personas koda septītajai vertībai ir jābūt domu zīmei:");
+                return false;
+            }
+            
+            return true;
+        }
+        public static void PrintBirthday(string personId) 
+        {
+            string menesis;
+
+            switch (menesis = personId.Substring(2, 2))
+            {
+                case "01":
+                    menesis = "janvāris";
+                    break;
+                case "02":
+                    menesis = "februāris";
+                    break;
+                case "03":
+                    menesis = "marts";
+                    break;
+                case "04":
+                    menesis = "aprīlis";
+                    break;
+                case "05":
+                    menesis = "maijs";
+                    break;
+                case "06":
+                    menesis = "jūnijs";
+                    break;
+                case "07":
+                    menesis = "jūlijs";
+                    break;
+                case "08":
+                    menesis = "augusts";
+                    break;
+                case "09":
+                    menesis = "septembris";
+                    break;
+                case "10":
+                    menesis = "oktobris";
+                    break;
+                case "11":
+                    menesis = "novembris";
+                    break;
+                case "12":
+                    menesis = "decembris";
+                    break;
+                default:
+                    menesis = "KĻŪDA! Kaut kas nogāja greizi ar ievadīto personas kodu. Lūdzu mēģiniet vēlreiz!";
+                    break;
+
+            }
+
+
+            int gads = int.Parse(personId.Substring(4, 2));
+            int a;
+            if (gads > 19)
+            {
+                a = 19;
+            }
+            else
+            {
+                a = 20;
+            }
+            Console.WriteLine($"Dzimšanas diena - {personId.Substring(0, 2)}.{menesis} {a}{personId.Substring(4, 2)}.gads");
+        }
+
+    }
+}

@@ -1,0 +1,55 @@
+Izveidot static metodi GetOnlySmallValues, kura atrodas atsevišķā projektā (Library projekts) un atsevišķā failā. 
+Metodei , kā parametru ir jāsaņem int[] un jāatgriež atpakaļ int[], kurā atrodas visas vērtības, kuras mazākas par 5;
+
+
+﻿using System;
+using Test;
+
+namespace ud81
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[] { 1, 23, 456, 67, 3, 6666, 0, 2345, 51, 90, 1, 1, 2, 4, 5555555, 999999, 67, 908 };
+            int[] pagaidu = metode.GetOnlySmallValues(arr);
+            foreach (var item in pagaidu)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+
+
+﻿using System;
+
+namespace Test
+{
+    public class metode
+    {
+        public static int[] GetOnlySmallValues(int[] arr)
+        {
+            int a = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 5)
+                {
+                    a++;
+                }
+            }
+            int[] masivs = new int[a];
+            int b = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 5)
+                {
+                    masivs[b] = arr[i];
+                    b++;
+                }
+            }
+            arr = masivs;
+           return arr;
+        }
+    }
+}

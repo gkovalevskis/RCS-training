@@ -1,0 +1,57 @@
+Izmantojot metožu overload iespējas definēt metodi PrintNameSurname, kura vienā gadījumā strādā ar vienu ieejas parametru name, 
+bet otrajā gadījumā ar diviem parametriem name un surname. Izveidot papildus metodi PrintNameAge (izdruka vārdu un vecumu), 
+tā, lai tai būtu tikai divi parametri un ja lietotājs nav ievadījis vecumu, tad vecuma vietā rakstītos skaitlis 99.
+
+using System;
+
+namespace Uzdevums7._2
+{
+    class Program
+    {
+        public static void PrintNameSurname(string name)
+        {
+            Console.WriteLine(name);
+        }
+
+        public static void PrintNameSurname(string name, string surname)
+        {
+            string nameSurname = $"{name} {surname}";
+            Console.WriteLine(nameSurname);
+        }
+
+        public static void PrintNameAge(string name, int age = 99)
+        {
+            string nameAge = $"{name} vecums {age}";
+            Console.WriteLine(nameAge);
+            
+        }
+        static void Main(string[] args)
+        {
+            //Izmantojot metožu overload iespējas definēt metodi PrintNameSurname, 
+            //kura vienā gadījumā strādā ar vienu ieejas parametru name, 
+            //bet otrajā gadījumā ar diviem parametriem name un surname.
+            //Izveidot papildus metodi PrintNameAge(izdruka vārdu un vecumu), tā, 
+            //lai tai būtu tikai divi parametri un ja lietotājs nav ievadījis vecumu, 
+            //tad vecuma vietā rakstītos skaitlis 99.
+
+            Console.WriteLine("Ludzu ievadiet Jusu vardu:");
+            string name = Console.ReadLine();
+
+            
+            Console.WriteLine("Ludzu ievadiet uzvardu:");
+            string surname = Console.ReadLine();
+
+           
+            Console.WriteLine("Ludzu ievadiet savu vecumu:");
+            string x = Console.ReadLine();
+            
+            int x2;
+            bool vaiSanacaPArveidot = int.TryParse(x, out x2);
+            int age = int.Parse(x);
+       
+            PrintNameSurname(name);
+            PrintNameSurname(name, surname);
+            PrintNameAge(name);
+        }
+    }
+}

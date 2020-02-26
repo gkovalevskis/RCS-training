@@ -1,0 +1,30 @@
+Uzrakstīt programmu, kura ievadē saņem divus teksta gabalus un izvada tos kombinētā formā:
+Īsākais+garakais+Īsākais, ja abi gabali ir vienādā garumā, pieņemt, ka pirmais ir garākais.
+
+IN:
+str1(String)
+str2(String)
+
+OUT:
+str1+str2+str1 / str2+str1+str2
+
+"Hello", "hi" = "hiHellohi"
+"hi", "Hello" = "hiHellohi"
+"aaa", "b" = "baaab"
+"aaa", "bbb" = "bbbaaabbb"
+
+
+public class Uzdevums1.5. {
+
+	public static void main(String[] args) {
+		System.out.println(makeMeOne("Labas", "Daba"));
+	}
+	public static String makeMeOne(String s1, String s2) {
+		if (s1.length() < s2.length() || s1.length() == s2.length()) {
+			return s1 + s2 + s1;
+		}
+		else  {
+			return s2 + s1 + s2;
+		}
+	}
+}

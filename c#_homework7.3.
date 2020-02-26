@@ -1,0 +1,41 @@
+Izveidot metodi PrintArrayValues, kura kā parametru saņem int[] un izdrukā visas tā vērtības. 
+Izmantojot metožu overload funkciju definēt metodi PrintArrayValues, kura kā parametru saņem string[] 
+un var izdrukāt string[] visas vērtības.
+
+using System;
+
+namespace Uzdevums7._4
+{
+    class Program
+    {
+        public static void PrintArrayValues(int[]skaitli)
+        {
+            for (int i = 0; i < skaitli.Length; i++)
+            {
+                Console.WriteLine(skaitli[i]);
+            }
+        }
+        public static void PrintArrayValues(string[]text)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.WriteLine(text[i]);
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            //Izveidot metodi PrintArrayValues, kura kā parametru saņem int[] un izdrukā visas tā vērtības. 
+            //Izmantojot metožu overload funkciju definēt metodi PrintArrayValues, 
+            //kura kā parametru saņem string[] un var izdrukāt string[] visas vērtības.
+
+            int[] skaitli = new int []{ 1, 56, 77, 89, 34, 22, 2, 3, 4, 8 };
+            string[] text = new string[] { "Ilmārs", "Anna", "Aleksejs", "Jogita", "Valdis", "Sarmīte"};
+
+            PrintArrayValues(skaitli);
+            Console.WriteLine("/////////////////////////////////////////////////////////////////////");
+            PrintArrayValues(text);
+
+        }
+    }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		IOSC shipping
+		</title>
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs1.css"/>
+		<script src="nd_script2.js"></script>
+	</head>
+	<body>
+	<nav class="nav">
+		<img src="sale.jpg" class="logo_image"/>
+			<ul class="ul_nav">
+				<li>
+					<a href="index.php">Home</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_photography.php">Photography</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_reviews.php">Reviews</a>
+				</li>
+				<li class = "selected">
+					<a href="nosleguma_darbs_shipping.php">Shipping</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_send.php">Send</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_comment.php">Comment</a>
+				</li>
+			</ul>
+		</nav>
+	<h1>SHIPPING FEE CALCULATOR</h1>
+	<br />
+	<div class="delivery">
+		<label>Choose country</label>
+			<select id="country" name="country">
+					<option value="None">Select</option>
+					<option value="groupFour">AUSTRALIA</option>
+					<option value="groupThree">AUSTRIA</option>
+					<option value="groupThree">BELGIUM</option>
+					<option value="groupThree">CANADA</option>
+					<option value="groupFour">COSTA RICA</option> 
+					<option value="groupTwo">CROATIA</option>
+					<option value="groupTwo">CYPRUS</option>
+					<option value="groupTwo">CZECH REPUBLIC</option>
+					<option value="groupOne">ESTONIA</option>
+					<option value="groupThree">FINLAND</option>
+					<option value="groupThree">FRANCE</option>
+					<option value="groupTwo">GERMANY</option>
+					<option value="groupThree">GREECE</option>
+					<option value="groupTwo">IRAN</option>
+					<option value="groupFour">IRELAND</option>  
+					<option value="groupTwo">ISRAEL</option>
+					<option value="groupThree">ITALY</option>
+					<option value="groupOne">LITHUANIA</option>
+					<option value="groupTwo">MALTA</option>
+					<option value="groupTwo">NETHERLANDS</option>
+					<option value="groupFour">NEW ZEALAND</option>
+					<option value="groupFour">NORWAY</option> 	
+					<option value="groupTwo">POLAND</option>
+					<option value="groupTwo">SAUDI ARABIA</option>
+					<option value="groupTwo">SINGAPORE</option>
+					<option value="groupTwo">SOUTH AFRICA</option>
+					<option value="groupTwo">SPAIN</option>
+					<option value="groupTwo">SWEDEN</option>
+					<option value="groupThree">SWITZERLAND</option>					
+					<option value="groupTwo">UNITED ARAB EMIRATES</option>
+					<option value="groupThree">UNITED KINGDOM</option>
+					<option value="groupThree">USA</option>
+			</select>	
+	</div>
+	<br />
+	<div class="delivery">
+		<label>Choose weight</label>
+			<select id="weight" name="weight">
+					<option value="None">Select</option>
+					<option value="first">0-20 grams</option>
+					<option value="second">21-100 grams</option>
+					<option value="third">101-500 grams</option>
+					<option value="fourth">501-1000 grams</option>
+					<option value="fifth">1001-2000 grams</option>
+			</select>	
+	</div>
+	<br />
+	<div id="dev_sum" class="delivery">
+		<button id="button" onclick="calculateTotal()">CALCULATE!</button>
+	</div>
+	</body>

@@ -1,0 +1,89 @@
+function calculateTotal(){
+	let weight = document.getElementById("weight");//saņem dokumenta elementu, kurš ir tur atzīmēts id = "weight";
+	let weightValue = weight.options[weight.selectedIndex].value;//saņem izvelēto weight vērtību
+	let country = document.getElementById("country");//saņem dokumenta elementu, kurš ir tur atzīmēts id = "country";
+	let countryValue = country.options[country.selectedIndex].value;//saņem izvelēto country vērtību
+	let output;
+	switch(weightValue + " | " + countryValue) {
+		//FIRST
+		case "first | groupOne":
+			output = 3.63;
+			break;
+		case "first | groupTwo":
+			output = 3.69;
+			break;	
+		case "first | groupThree":
+			output = 3.76;
+			break;	
+		case "first | groupFour":
+			output = 3.88;
+			break;	
+		//SECOND	
+		case "second | groupOne":
+			output = 4.11;
+			break;	
+		case "second | groupTwo":
+			output = 4.48;
+			break;	
+		case "second | groupThree":
+			output = 4.59;
+			break;	
+		case "second | groupFour":
+			output = 5.03;
+			break;	
+		//THIRD	
+		case "third | groupOne":
+			output = 5.53;
+			break;	
+		case "third | groupTwo":
+			output = 6.04;
+			break;	
+		case "third | groupThree":
+			output = 7.06;
+			break;	
+		case "third | groupFour":
+			output = 8.08;
+			break;	
+		//FOURTH	
+		case "fourth | groupOne":
+			output = 6.78;
+			break;	
+		case "fourth | groupTwo":
+			output = 8.11;
+			break;	
+		case "fourth | groupThree":
+			output = 9.61;
+			break;	
+		case "fourth | groupFour":
+			output = 11.87;
+			break;	
+		//FIFTH	
+		case "fifth | groupOne":
+			output = 8.83;
+			break;	
+		case "fifth | groupTwo":
+			output = 11.04;
+			break;	
+		case "fifth | groupThree":
+			output = 14.11;
+			break;	
+		case "fifth | groupFour":
+			output = 17.96;
+			break;
+		default:
+			output = "Something went wrong. Please try one more time!";
+	}
+	let shipmentText = document.getElementById('shipment');//definējam mainīgo rezultātam, kurš ir parādījies pēc CALCULATE nospiešanas
+	if (shipmentText){
+		shipmentText.innerHTML = "Selected parameters fee = "+ output +" EUR";//info, kura parādīsies nospiežot CALCULATE pogu
+	}else{
+		createElement(output);//nospiežot CALCULATE pogu izsaucam metodi, elementa izveidošanai
+	}
+}
+
+function createElement(cost){
+	let header = document.createElement("h2");//definē mainīgo, kurš parādīsies h2 tagā
+	header.setAttribute("id", "shipment");//iestata atribūtus augstāk definētam elementam
+	header.innerHTML = "Selected parameters fee = "+ cost +" EUR";//info, kura parādīsies nospiežot CALCULATE pogu
+	document.getElementById("dev_sum").appendChild(header);//parādam tikai pēdējo info
+}

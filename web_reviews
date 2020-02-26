@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		IOSC reviews
+		</title>
+		<script src="nd_script1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs1.css"/>
+	</head>
+	<body>
+		<nav class="nav">
+		<img src="sale.jpg" class="logo_image"/>
+			<ul class="ul_nav">
+				<li>
+					<a href="index.php">Home</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_photography.php">Photography</a>
+				</li>
+				<li class = "selected">
+					<a href="nosleguma_darbs_reviews.php">Reviews</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_shipping.php">Shipping</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_send.php">Send</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_comment.php">Comment</a>
+				</li>
+			</ul>
+		</nav>
+		<br />
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs.css"/>
+		<br />
+		<div id = "images">
+			<img name = "slide" src = "reviews2.jpg" />
+		</div>	
+		<!--<h1 id = "review">EACH REVIEW HAS A PERSONAL STORY</h1>-->
+	</body>

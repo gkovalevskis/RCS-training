@@ -1,0 +1,14 @@
+var i = 0; //definējam mainīgo ārpus funkcijas
+function slideIt(){
+	let images = ["review1.jpg", "review2.jpg", "review3.jpg", "review4.jpg", "review5.jpg"];//definējam masīvu iekš metodes
+	let timeout = 7000;//definējam bildes redzamības laiku milisekundēs
+	document.slide.src = images [i];//bilžu rādīšanai tiks izmantots masīva viens elements
+		if (i < images.length - 1){//ja masīva skaitītājs ir mazāks par 4, tad pieskaita nākošo elementu
+			i++;
+		}
+		else{
+			i = 0;
+		}
+	setTimeout("slideIt()", timeout);//gaida 7000 milisekundes
+}
+window.onload = slideIt;//pie katras lapas ielādes reizes uzsaktos bilžu karuselis

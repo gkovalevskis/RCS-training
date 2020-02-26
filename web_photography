@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		IOSC photography
+		</title>
+		<link rel="stylesheet" type="text/css" href="css_nosleguma_darbs1.css"/>
+		<script src="nd_script4.js"></script>
+	</head>
+	<body>
+	<nav class="nav">
+		<img src="sale.jpg" class="logo_image"/>
+			<ul class="ul_nav">
+				<li>
+					<a href="index.php">Home</a>
+				</li>
+				<li class = "selected">
+					<a href="nosleguma_darbs_photography.php">Photography</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_reviews.php">Reviews</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_shipping.php">Shipping</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_send.php">Send</a>
+				</li>
+				<li>
+					<a href="nosleguma_darbs_comment.php">Comment</a>
+				</li>
+			</ul>
+		</nav>
+		<h1 onclick="makeSmall(this)" ondblclick="makeBig(this)">IDEAS FOR PRODUCT PHOTOS</h1>
+		<br />
+		<div id = "textLeft"> 
+			<h2>Light your shoot</h2>
+			<p>
+			Good lighting is key to good photography. It makes it easier for shoppers to accurately see the details and colors of your products. 
+			When lighting your products, the key is to avoid harsh light, whether it’s direct sunlight, 
+			a strong fluorescent indoor bulb or a flash on your camera. Don't have lighting equipment? 
+			Sunlight makes for beautiful photos, if you diffuse the light. To avoid harsh shadows, use indirect sunlight. If you’re shooting outdoors, 
+			wait for a cloudy day. Harsh sunlight can create unwanted shadows. You can also avoid harsh direct sunlight by shooting in the partial shade 
+			and outside the hours when the sun is brightest. When taking photographs indoors using natural light, try positioning your products a 
+			few feet from a window, and aim for a time of day when light is plentiful but not shining directly on your product (overly bright light 
+			can cause details to get washed out). If the light is still too bright, try hanging a thin white bedsheet over the window to diffuse the 
+			light and create a soft glow.
+			</p>
+		</div>
+		<br />
+			<img id = "left" src="photography1.jpg"/>
+		<br />
+			<img id = "clear" src="photography2.jpg"/>
+		<br />
+		<div id = "textLeft"> 
+			<h2>Steady your shoot</h2>
+			<p>
+			It’s crucial for product photographs to be in focus, because clear product shots give shoppers 
+			more confidence to make a purchase. Use these tips to get sharp shots.
+			Taking clear photos of your products requires a steady camera. If you hold the camera with your hands, 
+			it’s likely that you will slightly move the camera while photographing, and your photos will come out blurry. 
+			Stabilize your camera by placing it on a tripod or solid surface, such as a sturdy stack of books. 
+			Any hard surface will provide stability, but a tripod will give you more leverage to adjust your camera angle.
+			</p>
+		</div>
+		<br />
+</body>

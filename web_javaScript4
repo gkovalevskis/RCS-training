@@ -1,0 +1,6 @@
+function makeBig(element){
+	element.style.fontSize = "50px";//cik būs liels elements
+}
+function makeSmall(element){
+	element.style.fontSize = "35px";//cik būs mazs elements
+}
